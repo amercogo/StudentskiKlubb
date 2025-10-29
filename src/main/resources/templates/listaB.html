@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Members</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}" />
+</head>
+<body class="container py-4">
+<h1>Members</h1>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>ID</th><th>Name</th><th>Email</th><th>Role</th><th>Joined</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="m : ${members}">
+        <td th:text="${m.id}"></td>
+        <td th:text="${m.name}"></td>
+        <td th:text="${m.email}"></td>
+        <td th:text="${m.role}"></td>
+        <td th:text="${m.joinedYear}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<p>
+    <a class="btn btn-outline-secondary" th:href="@{/a}">Back to Events</a>
+</p>
+</body>
+</html>
