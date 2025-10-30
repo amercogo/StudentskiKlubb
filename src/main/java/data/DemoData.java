@@ -24,12 +24,12 @@ public class DemoData {
         members.add(new Member(3L, "Sara S.", "sara@example.com", "Student", 2024));
         members.add(new Member(4L, "Luka L.", "luka@example.com", "Student", 2021));
 
-        // Events
+
         Event e1 = new Event(1L, "Welcome Meetup", LocalDate.now().plusDays(3), "Sala A");
         Event e2 = new Event(2L, "Hack Night", LocalDate.now().plusDays(10), "Lab 2");
         Event e3 = new Event(3L, "CV & Careers", LocalDate.now().plusDays(20), "Sala B");
 
-        // 1:N – dodajemo članove na evente
+
         e1.addAttendee(members.get(0));
         e1.addAttendee(members.get(2));
 

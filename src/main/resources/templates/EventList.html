@@ -22,14 +22,14 @@
         <td th:text="${e.likes}"></td>
         <td th:text="${#lists.size(e.attendees)}"></td>
         <td>
-            <a class="btn btn-sm btn-primary" th:href="@{|/a/action/${e.id}|}">Open</a>
+            <a class="btn btn-sm btn-primary" th:href="@{|/Event/action/${e.id}|}">Open</a>
         </td>
     </tr>
     </tbody>
 </table>
 
 <p>
-    <a class="btn btn-outline-secondary" th:href="@{/b}">View Members</a>
+    <a class="btn btn-outline-secondary" th:href="@{/Member}">View Members</a>
 </p>
 </body>
 </html>

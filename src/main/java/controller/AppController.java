@@ -22,30 +22,29 @@ public class AppController {
     // Redirect root -> /a (lista Event-a)
     @GetMapping("/")
     public String home() {
-        return "redirect:/a";
+        return "redirect:/Event";
     }
 
     // /a : lista Event-a (Model A)
-    @GetMapping("/a")
+    @GetMapping("/Event")
     public String listEvents(Model model) {
         List<Event> events = data.getEvents().stream()
                 .sorted(Comparator.comparing(Event::getDate))
                 .toList();
         model.addAttribute("events", events);
-        return "listaA";
+        return "EventList";
     }
 
     // /b : lista Member-a (Model B)
-    @GetMapping("/b")
+    @GetMapping("/Member")
     public String listMembers(Model model) {
         List<Member> members = data.getMembers();
         model.addAttribute("members", members);
-        return "listaB";
+        return "MembersList";
     }
 
-    // /a/action/{id} : stranica akcije za Event
-    // GET param 'do=like' povecava lajkove; GET param 'addMemberId=...' dodaje clana
-    @GetMapping("/a/action/{id}")
+
+    @GetMapping("/Event/action/{id}")
     public String eventAction(
             @PathVariable Long id,
             @RequestParam(name = "do", required = false) String action,
@@ -69,7 +68,7 @@ public class AppController {
         }
 
         model.addAttribute("event", event);
-        model.addAttribute("allMembers", data.getMembers()); // dropdown za dodavanje
+        model.addAttribute("allMembers", data.getMembers());
         return "action";
     }
 }

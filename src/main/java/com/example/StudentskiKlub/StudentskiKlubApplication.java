@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(
         scanBasePackages = {
-                "com.example.StudentskiKlub", // tvoj base paket (ostavi ovako)
-                "controller",                  // top-level paketi koje imaš
+                "com.example.StudentskiKlub",
+                "controller",
                 "data",
                 "model"
         }

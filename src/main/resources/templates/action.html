@@ -22,10 +22,10 @@
                 <strong>Likes:</strong> <span th:text="${event.likes}"></span>
             </p>
             <a class="btn btn-success me-2"
-               th:href="@{|/a/action/${event.id}?do=${'like'}|}">👍 Like</a>
+               th:href="@{|/Event/action/${event.id}?do=${'like'}|}">👍 Like</a>
 
 
-            <form th:action="@{|/a/action/${event.id}|}" method="get" class="d-inline">
+            <form th:action="@{|/Event/action/${event.id}|}" method="get" class="d-inline">
                 <input type="hidden" name="do" value="add"/>
                 <select class="form-select d-inline w-auto me-2" name="addMemberId">
                     <option th:each="m : ${allMembers}"
@@ -51,7 +51,7 @@
         </li>
     </ul>
 
-    <a class="btn btn-outline-secondary" th:href="@{/a}">Back to Events</a>
+    <a class="btn btn-outline-secondary" th:href="@{/Event}">Back to Events</a>
 </div>
 
 </body>

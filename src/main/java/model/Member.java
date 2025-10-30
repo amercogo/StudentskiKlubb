@@ -4,7 +4,7 @@ public class Member {
     private Long id;
     private String name;
     private String email;
-    private String role;     // npr. "Student", "Organizer"
+    private String role;
     private int joinedYear;
 
     public Member() {}

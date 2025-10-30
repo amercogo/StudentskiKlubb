@@ -9,8 +9,8 @@ public class Event {
     private String title;
     private LocalDate date;
     private String location;
-    private int likes;                 // za jednostavnu akciju "like"
-    private List<Member> attendees = new ArrayList<>(); // 1:N: jedan Event ima više Member-a
+    private int likes;
+    private List<Member> attendees = new ArrayList<>();
 
     public Event() {}
 
